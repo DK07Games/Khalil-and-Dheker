@@ -8,8 +8,11 @@
 
 
 
-<body>
-	
+<body>	
+	<audio src="play.mp3" id="bb" loop="loop"></audio>
+	<script type="text/javascript">
+		
+	</script>
 	<div id="pre-container">
 		<button id="bttn">Play game</button>
    	</div>
@@ -17,9 +20,7 @@
 	<div id="main-container">
 		<img src="source.gif">
 		<h1> SNAKE GAME </h1>
-		<audio src="play.mp3" type="audio/mpeg" id='music' loop="loop" autoplay="autoplay">  
 
-		</audio>
 		<canvas width="900" height="400" id="game"></canvas>
 		<div id="ok">
 		<br><button onclick="moveleft() "class="btn" id="left"> LEFT </button>
@@ -28,15 +29,21 @@
 		<br><button onclick="movedown()" class="btn" id="down">DOWN </button>
 
 	</div>	
+
+	<script>
+function playAudio() { 
+var x = document.getElementById('music'); 
+x.play(); 
+} 
+ </script>
 	
 	<div id="gameover" >
 		<img id="g.o">
 
 	 </div>
-	 <label> Score </label>
 	<div id="score">   SCORE  </div>	
 	<script>
-	console.log(score)
+	
 
 	var canvas=document.getElementsByTagName('canvas');
 	console.log(canvas)
@@ -54,7 +61,6 @@
 		$('#pre-container').hide()
 		$('#game').show()
 		$('#ok').show()
-		$('#music').play()
 		})
 			
 	</script>

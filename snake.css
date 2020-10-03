@@ -5,7 +5,8 @@ body {
 		justify-content: right;
 		align-items: center;
 		margin:0;
-		background-color: #cc0000;
+		background-image: url("bg7.gif");
+		background-repeat: no-repeat stretch;
 	}
 
 h1 {
@@ -36,19 +37,20 @@ img {
   	left: 20px;
   	top: 20px;
 }
-label {
-	font-size: 50px;
+/*label {
+	font-size: 30px;
 	color: white;
 	position: absolute;
-  	left: 700px;
-  	top: 20px;
-}
+  	right: 550px;
+  	bottom: 270px;
+}*/
+
 #score {
 	font-size: 30px;
 	color: white;
 	position: absolute;
-  	left: 900px;
-  	top: 40px;
+  	right: 525px;
+  	top:  665px;
 }
 
 #game-board {
@@ -72,7 +74,7 @@ border:.25vmin solid gold;
 
 #bttn {
   transition-duration: 0.4s;
-  color: grey;
+  color: red;
   width: 900px;
   height: 400px;
   position: absolute;
@@ -81,20 +83,21 @@ border:.25vmin solid gold;
   font-size: 50px	
 }
 #bttn:hover {
-	background-image: url("bg5.gif");	
+  background-image: url("bg5.gif");	
   background-color: #4CAF50;
   color: white;
 }
 .btn{
   transition-duration: 0.4s;
-  color: grey;
+  background-color: black;
+  color: white;
   width: 100px;
   height: 60px;  
 }
 
 .btn:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 #up {
 position: absolute;

@@ -1,13 +1,6 @@
-var sound = document.getElementById('music')
-
-// setTimeout( () => {
-//   sound.play().then((e) => {
-//     console.log(e)
-//   }).catch(err => {
-//     console.log('error',err)
-//   })
-// }, 1000)
-
+setTimeout(function(){
+      document.getElementById("bb").play();
+    }, 2000)
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -26,7 +19,7 @@ function loop() {
   snake.b += snake.db;
   //  snake position horizontally on edge of screen
   if (snake.a < 0) {
-    snake.a = 160;
+        snake.a = 160;
         snake.b = 160;
         snake.cells = [];
         snake.maxCells = 4;
@@ -34,10 +27,12 @@ function loop() {
         snake.db = 0;
         apple.a = getRandomInt(0, 25) * grid;
         apple.b = getRandomInt(0, 25) * grid;
+        document.getElementById('score').innerHTML=0;
+        score = 0;
         alert('GAME OVER!')
   }
-  else if (snake.a >= canvas.width) {
-    snake.a = 160;
+  if (snake.a >= canvas.width) {
+        snake.a = 160;
         snake.b = 160;
         snake.cells = [];
         snake.maxCells = 4;
@@ -45,11 +40,14 @@ function loop() {
         snake.db = 0;
         apple.a = getRandomInt(0, 25) * grid;
         apple.b = getRandomInt(0, 25) * grid;
-        alert('GAME OVER!')
+        document.getElementById('score').innerHTML=0;
+        score = 0;
+        // alert('GAME OVER!')
+
   }
   // snake position vertically on edge of screen
   if (snake.b < 0) {
-    snake.a = 160;
+        snake.a = 160;
         snake.b = 160;
         snake.cells = [];
         snake.maxCells = 4;
@@ -57,10 +55,12 @@ function loop() {
         snake.db = 0;
         apple.a = getRandomInt(0, 25) * grid;
         apple.b = getRandomInt(0, 25) * grid;
+        document.getElementById('score').innerHTML=0;
+        score = 0;
         alert('GAME OVER!')
   }
-  else if (snake.b >= canvas.height) {
-    snake.a = 160;
+  if (snake.b >= canvas.height) {
+        snake.a = 160;
         snake.b = 160;
         snake.cells = [];
         snake.maxCells = 4;
@@ -68,6 +68,8 @@ function loop() {
         snake.db = 0;
         apple.a = getRandomInt(0, 25) * grid;
         apple.b = getRandomInt(0, 25) * grid;
+        document.getElementById('score').innerHTML=0;
+        score = 0;
         alert('GAME OVER!')
   }
   // track of where snake has been. 
